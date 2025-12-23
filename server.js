@@ -7,11 +7,12 @@ const PORT = process.env.PORT || 3000;
 // Simple API key middleware
 app.use((req, res, next) => {
   const apiKey = req.query.key;
-  if (!apiKey || apiKey !== process.env.prj_ENsseI0FKqFyS9Gk93A8y3HEp0nv) {
+  if (!apiKey || apiKey !== process.env.API_KEY) {
     return res.status(401).json({ error: 'Unauthorized. Invalid API key.' });
   }
   next();
 });
+
  
 // API endpoint to download Instagram media
 app.get('/download', async (req, res) => {
