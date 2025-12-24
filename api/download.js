@@ -1,7 +1,7 @@
 export default function handler(req, res) {
   const apiKey = req.query.key;
 
-  if (!apiKey || apiKey !== process.env.API_KEY) {
+  if (!apiKey || apiKey !== process.env.lovable12345haideri) {
     return res.status(401).json({
       error: "Unauthorized. Invalid API key"
     });
